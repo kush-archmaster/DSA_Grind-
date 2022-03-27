@@ -1,0 +1,5 @@
+Q1: Angle between the clock handles
+Q2: Prime factoristion of a number
+Q3: Longest consecutive numbers present in an unsorted array
+Q4: Lowest common ancestors in a BT
+Q5: Dictionary - begin word to final word in minimum swaps
