@@ -23,7 +23,7 @@ void mergeSort(vector<int> &nums1, int m, vector<int> &nums2, int n)
         }
         else
         {
-            nums1[final_index--] = nums1[end_nums2--];
+            nums1[final_index--] = nums2[end_nums2--];
         }
     }
 }
@@ -33,7 +33,8 @@ int main(int argc, char *argv[])
     vector<int> nums1 = {1, 2, 3, 0, 0, 0},
                 nums2 = {2, 5, 6};
 
-    mergeSort(nums1, nums1.size(), nums2, nums2.size());
+    //& m is the number of elements filled inside nums1 arrat
+    mergeSort(nums1, 3, nums2, nums2.size());
 
     for (auto i : nums1)
     {
