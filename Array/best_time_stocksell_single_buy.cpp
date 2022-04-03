@@ -18,7 +18,7 @@ int maxProfit(vector<int> &prices)
         else
             min_value_to_buy = min(min_value_to_buy, prices[i]);
 
-        //* caclulating max profit from the single buy date
+        //* calculating max profit from the single buy date
         max_profit = max(max_profit, prices[i] - min_value_to_buy);
     }
 
