@@ -39,10 +39,10 @@ ListNode *swapPairs(ListNode *head)
 
 /*
 
- 1 2 3 4
+*  1 2 3 4
 
- prev = 1, head = 2
- 2 1
+*  prev = 1, head = 2
+*  2 1
 
 */
 
