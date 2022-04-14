@@ -17,7 +17,7 @@ ListNode *removeNthFromEnd(ListNode *head, int n)
     if (head == NULL)
         return NULL;
 
-    // if the length of linked list is same as n
+    //& calculating the length of LL
     int length_of_ll = 0;
     ListNode *curr = head;
     while (curr)
@@ -26,6 +26,7 @@ ListNode *removeNthFromEnd(ListNode *head, int n)
         curr = curr->next;
     }
 
+    //& if the length of linked list is same as n
     if (n == length_of_ll)
     {
         ListNode *temp = head;
