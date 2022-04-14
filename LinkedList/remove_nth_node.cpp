@@ -42,6 +42,7 @@ ListNode *removeNthFromEnd(ListNode *head, int n)
         if (fast != NULL)
             fast = fast->next;
 
+    //& before coming here do solve for edge case (above) so that fast->next doesnt give SEGFAULT
     while (fast->next != NULL)
     {
         slow = slow->next;
