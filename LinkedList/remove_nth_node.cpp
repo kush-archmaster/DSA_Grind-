@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
     l1->next->next->next->next->next = new ListNode(6);
     l1->next->next->next->next->next->next = new ListNode(9);
 
-    l1 = removeNthFromEnd(l1, 2); //& removing 4th element from end i.e 6
+    l1 = removeNthFromEnd(l1, 4); //& removing 4th element from end i.e 6
 
     while (l1 != NULL)
     {
