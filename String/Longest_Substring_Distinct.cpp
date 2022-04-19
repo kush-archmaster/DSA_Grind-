@@ -1,6 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool isUnique(string s, int start, int end)
+{
+    for (int i = start; i < end; i++)
+    {
+        for (int j = i + 1; j <= end; j++)
+        {
+            if (s[i] == s[j])
+            {
+                return false;
+                break;
+            }
+        }
+    }
+    return true;
+}
+
 int lengthOfLongestSubstring(string s)
 {
     //& compute the maxend(j) --> length of longest substring that has distinct characters that end with j
@@ -36,12 +52,25 @@ int lengthOfLongestSubstring(string s)
         previous_index[s[curr_index]] = curr_index; //& updating the previous index for that character
     }
 
+    for (int i = 0; i <= n - result; i++)
+    {
+        int j = i + result - 1;
+        if (isUnique(s, i, j))
+        {
+            //& cout << "Start : " << i << " End: " << j << endl;
+            if ((j - i + 1) == result)
+            {
+                cout << s.substr(i, result) << endl;
+            }
+        }
+    }
+
     return result;
 }
 
 int main(int argc, char *argv[])
 {
-    string s = "abcabcbb";
+    string s = "abcdeffghijkkklmnop";
     cout << lengthOfLongestSubstring(s) << endl;
     return EXIT_SUCCESS;
 }
